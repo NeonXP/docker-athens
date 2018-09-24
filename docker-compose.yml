@@ -4,12 +4,5 @@ services:
     build: .
     ports:
       - "3000:3000"
-    deploy:
-      replicas: 1
-    configs:
-      - proxy_config
   mongo:
     image: mongo:3.7.9-jessie
-configs:
-  proxy_config: 
-    file: ./config.toml
